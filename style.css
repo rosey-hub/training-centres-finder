@@ -1,0 +1,208 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #202b3c;
+}
+
+.topbar {
+  background: #173b68;
+  color: white;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.topbar h1 {
+  margin: 0 0 6px;
+  font-size: 25px;
+}
+
+.topbar p {
+  margin: 0;
+  color: #dce8f7;
+}
+
+main {
+  width: min(1050px, 92%);
+  margin: 30px auto;
+  min-height: 70vh;
+}
+
+.auth-card, .search-card, .welcome {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px #152b4512;
+  margin-bottom: 20px;
+}
+
+.auth-card {
+  max-width: 450px;
+  margin: 40px auto;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin: 15px 0 7px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #2563eb;
+}
+
+button {
+  border: 0;
+  padding: 12px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.primary {
+  background: #1765c1;
+  color: white;
+}
+
+.secondary {
+  background: #e5edf7;
+  color: #173b68;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.tabs, .search-actions {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.tab {
+  flex: 1;
+  background: #e8eef6;
+  color: #173b68;
+}
+
+.tab.active {
+  background: #173b68;
+  color: white;
+}
+
+#authSubmit {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.message {
+  color: #b42318;
+  line-height: 1.5;
+}
+
+.results-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 25px 0 15px;
+}
+
+.centres-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 18px;
+}
+
+.centre-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 15px #152b4512;
+  border-top: 4px solid #1765c1;
+}
+
+.centre-card h3 {
+  margin: 0 0 12px;
+  color: #173b68;
+}
+
+.centre-card p {
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.centre-card .courses {
+  color: #334155;
+}
+
+.centre-card .phone {
+  font-weight: 700;
+}
+
+.centre-card .map-button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 11px 14px;
+  border-radius: 7px;
+  color: white;
+  background: #16834a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    padding: 18px 5%;
+  }
+
+  .topbar h1 {
+    font-size: 20px;
+  }
+
+  main {
+    width: 94%;
+    margin-top: 18px;
+  }
+
+  .auth-card, .search-card, .welcome {
+    padding: 17px;
+  }
+
+  .search-actions button {
+    width: 100%;
+  }
+}
