@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kakinada Training Centre Finder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Training Centre Finder</h1>
+      <p>Find training centres around Kakinada</p>
+    </div>
+    <button id="logoutBtn" class="secondary hidden">Logout</button>
+  </header>
+
+  <main>
+    <section id="authSection" class="auth-card">
+      <h2>Welcome</h2>
+      <p>Login or create an account to find training centres.</p>
+
+      <div class="tabs">
+        <button id="loginTab" class="tab active">Login</button>
+        <button id="registerTab" class="tab">Register</button>
+      </div>
+
+      <form id="authForm">
+        <div id="nameGroup" class="hidden">
+          <label for="fullName">Full Name</label>
+          <input id="fullName" type="text" placeholder="Enter your name">
+        </div>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" required placeholder="Enter your email">
+
+        <label for="password">Password</label>
+        <input id="password" type="password" required minlength="6"
+          placeholder="Enter your password">
+
+        <button id="authSubmit" type="submit" class="primary">Login</button>
+      </form>
+      <p id="authMessage" class="message"></p>
+    </section>
+
+    <section id="homeSection" class="hidden">
+      <div class="welcome">
+        <h2>Find Training Centres</h2>
+        <p>Search by area, address, centre name or course.</p>
+      </div>
+
+      <div class="search-card">
+        <label for="locationSearch">Enter your area or address</label>
+        <input id="locationSearch" type="text"
+          placeholder="Example: Bhanugudi, Kakinada">
+
+        <div class="search-actions">
+          <button id="searchBtn" class="primary">Search Centres</button>
+          <button id="gpsBtn" class="secondary">Use My Current Location</button>
+        </div>
+        <p id="locationMessage" class="message"></p>
+
+        <label for="courseSearch">Search by course (optional)</label>
+        <input id="courseSearch" type="text"
+          placeholder="Example: AWS, Python, Java, DevOps">
+
+        <label for="nameSearch">Search by centre name (optional)</label>
+        <input id="nameSearch" type="text"
+          placeholder="Enter training centre name">
+      </div>
+
+      <div class="results-heading">
+        <h2>Available Training Centres</h2>
+        <span id="resultCount"></span>
+      </div>
+
+      <div id="centresList" class="centres-grid"></div>
+      <p id="centresMessage" class="message"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Training Centre Finder | Kakinada</p>
+  </footer>
+</body>
+</html>
